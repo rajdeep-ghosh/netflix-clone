@@ -3,7 +3,11 @@ import React from "react";
 function Nav() {
   return (
     <div>
-      <h1>This is nav</h1>
+      <nav>
+        <div>
+          
+        </div>
+      </nav>
     </div>
   );
 }
