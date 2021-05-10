@@ -1,15 +1,15 @@
 import React from "react";
 
 function HomeScreen() {
-    return (
-        <div>
-            {/* Nav */}
+  return (
+    <div>
+      {/* Nav */}
 
-            {/* Banner */}
+      {/* Banner */}
 
-            {/* Rows */}
-        </div>
-    );
+      {/* Rows */}
+    </div>
+  );
 }
 
 export default HomeScreen;
