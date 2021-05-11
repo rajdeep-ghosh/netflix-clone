@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <div>
       {/* Nav */}
-      <Nav />
+        <Nav />
       
       {/* Banner */}
 

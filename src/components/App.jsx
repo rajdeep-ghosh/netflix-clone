@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div>
       {/* Home Screen */}
-      <HomeScreen />
+        <HomeScreen />
     </div>
   );
 }
