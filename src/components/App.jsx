@@ -1,7 +1,7 @@
 import React from "react";
 import HomeScreen from "./HomeScreen";
 
-function App() {
+export default function App() {
   return (
     <div>
       {/* Home Screen */}
@@ -9,5 +9,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

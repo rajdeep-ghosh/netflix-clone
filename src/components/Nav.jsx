@@ -2,26 +2,13 @@ import React from "react";
 import NetflixLogo from "../assets/netflix-logo.png";
 import NetflixAvatar from "../assets/netflix-avatar.png";
 
-function Nav() {
+export default function Nav() {
   return (
     <div>
-      <nav>
-        <div>
-          <img 
-            className=""
-            src={NetflixLogo} 
-            alt="Netflix logo">
-          </img>
-
-          <img 
-            className="" 
-            src={NetflixAvatar}
-            alt="Netflix avatar">
-          </img>
-        </div>
-      </nav>
+      <div>
+        <img src={NetflixLogo} alt="Netflix logo" />
+        <img src={NetflixAvatar} alt="Netflix avatar" />
+      </div>
     </div>
   );
 }
-
-export default Nav;

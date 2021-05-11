@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 
-function HomeScreen() {
+export default function HomeScreen() {
   return (
     <div>
       {/* Nav */}
@@ -13,5 +13,3 @@ function HomeScreen() {
     </div>
   );
 }
-
-export default HomeScreen;
