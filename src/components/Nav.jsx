@@ -6,8 +6,8 @@ export default function Nav() {
   return (
     <div>
       <div>
-        <img src={NetflixLogo} alt="Netflix logo" />
-        <img src={NetflixAvatar} alt="Netflix avatar" />
+        <img className="fixed w-24" src={NetflixLogo} alt="Netflix logo" />
+        <img className="fixed w-6" src={NetflixAvatar} alt="Netflix avatar" />
       </div>
     </div>
   );
