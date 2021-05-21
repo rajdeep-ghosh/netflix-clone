@@ -20,7 +20,7 @@ export default function Banner() {
         <h1 className="text-sm w-[45rem] max-w-sm h-20 pt-4">This is a test description</h1>
       </div>
 
-      <div className="banner--fadeBottom" />
+      <div className="banner--fadeBottom h-28 mt-20" />
     </header>
   );
 }
