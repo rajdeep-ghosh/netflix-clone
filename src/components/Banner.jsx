@@ -14,8 +14,12 @@ export default function Banner() {
       <div className="ml-8 pt-36 h-48">
         <h1 className="text-5xl font-bold pb-1">Movie Name</h1>
         <div>
-          <button>Play</button>
-          <button>My List</button>
+          <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
+            Play
+          </button>
+          <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
+            My List
+          </button>
         </div>
         <h1 className="text-sm w-[45rem] max-w-sm h-20 pt-4">This is a test description</h1>
       </div>
