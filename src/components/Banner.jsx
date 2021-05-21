@@ -10,14 +10,16 @@ export default function Banner() {
         backgroundPosition: "center center"
       }}
     >
-      <div>
-        <h1>Movie Name</h1>
+      <div className="ml-8 pt-36 h-48">
+        <h1 className="text-5xl font-bold pb-1">Movie Name</h1>
         <div>
           <button>Play</button>
           <button>My List</button>
         </div>
         <h1>This is a test description</h1>
       </div>
+
+      <div className="banner--fadeBottom" />
     </header>
   );
 }
