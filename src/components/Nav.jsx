@@ -4,9 +4,9 @@ import NetflixAvatar from "../assets/netflix-avatar.png";
 
 export default function Nav() {
   const [showNavbar, handleShow] = useState(false);
-  
+
   function transitionNavbar() {
-    if(window.scrollY > 100) {
+    if (window.scrollY > 100) {
       handleShow(true);
     } else {
       handleShow(false);
@@ -21,8 +21,16 @@ export default function Nav() {
   return (
     <div className={`fixed top-0 p-5 w-full h-20 z-[1] ${showNavbar && `netflix__black`} transition ease-in duration-500`}>
       <nav className="flex justify-between">
-        <img className="w-28 fixed left-0 top-3 object-contain pl-5 cursor-pointer" src={NetflixLogo} alt="Netflix logo" />
-        <img className="w-6 fixed right-5 cursor-pointer" src={NetflixAvatar} alt="Netflix avatar" />
+        <img
+          className="w-28 fixed left-0 top-3 object-contain pl-5 cursor-pointer"
+          src={NetflixLogo}
+          alt="Netflix logo"
+        />
+        <img
+          className="w-6 fixed right-5 cursor-pointer"
+          src={NetflixAvatar}
+          alt="Netflix avatar"
+        />
       </nav>
     </div>
   );

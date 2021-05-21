@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "./Banner";
 import Nav from "./Nav";
 
 export default function HomeScreen() {
@@ -8,6 +9,7 @@ export default function HomeScreen() {
         <Nav />
       
       {/* Banner */}
+        <Banner />
 
       {/* Rows */}
     </div>
