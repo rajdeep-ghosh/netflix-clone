@@ -16,7 +16,7 @@ export default function Banner() {
           <button>Play</button>
           <button>My List</button>
         </div>
-        <h1>This is a test description</h1>
+        <h1 className="text-sm w-[45rem] max-w-sm h-20 pt-4">This is a test description</h1>
       </div>
 
       <div className="banner--fadeBottom" />
