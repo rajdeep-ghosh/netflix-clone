@@ -27,7 +27,7 @@ export default function Nav() {
           alt="Netflix logo"
         />
         <img
-          className="w-6 fixed right-5 cursor-pointer"
+          className="w-6 fixed right-5 pt-2 cursor-pointer"
           src={NetflixAvatar}
           alt="Netflix avatar"
         />
