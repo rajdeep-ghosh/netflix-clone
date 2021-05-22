@@ -17,7 +17,7 @@ export default function Banner() {
     >
       <div className="ml-8 pt-36 h-48">
         <h1 className="text-5xl font-bold pb-1">Movie Name</h1>
-        <div>
+        <div className="mt-4">
           <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
             Play
           </button>
