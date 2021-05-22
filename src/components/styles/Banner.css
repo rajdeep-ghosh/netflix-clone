@@ -1,7 +1,4 @@
-/* .banner--fadeBottom {
-    background-image: linear-gradient(
-        180deg,
-        rgba(37,37,37,0.6),
-        #111
-    );
-} */
+.banner__overlay {
+    -webkit-mask-image: radial-gradient(ellipse farthest-side at 75% 10%, #111, transparent);
+    mask-image: radial-gradient(ellipse farthest-side at 75% 10%, #111, transparent);
+}

@@ -27,14 +27,16 @@ export default function Banner() {
   }
 
   return (
-    <header
-      className="h-[30rem] relative object-contain text-white"
-      style={{
-        backgroundSize: "cover",
-        backgroundImage: `url("https://image.tmdb.org/t/p/w1280${featuredShow?.backdrop_path}")`,
-        backgroundPosition: "right top",
-      }}
-    >
+    <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-tl from-[#999] to-[#111]">
+      <div 
+        className="absolute top-0 right-0 w-3/4 h-[30rem] mix-blend-overlay banner__overlay"
+        style={{
+          backgroundImage: `url("https://image.tmdb.org/t/p/w1280${featuredShow?.backdrop_path}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "right top",
+        }}>
+      </div>
+
       <div className="ml-8 pt-36 h-48">
         <h1 className="text-5xl font-bold pb-1">
           Movie Name
@@ -61,7 +63,7 @@ export default function Banner() {
         </h1>
       </div>
 
-      <div className="banner--fadeBottom h-28 mt-20" />
+      <div className="h-28 mt-20" />
     </header>
   );
 }
