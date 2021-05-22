@@ -10,6 +10,10 @@ module.exports = {
           'og': '#E50914',
         },
         'netflix-black': '#111',
+      },
+      fontFamily: {
+        'mulish': 'Mulish',
+        'work-sans': '"Work Sans"',
       }
     },
   },

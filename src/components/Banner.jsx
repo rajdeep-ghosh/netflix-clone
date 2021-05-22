@@ -26,6 +26,11 @@ export default function Banner() {
     return string?.length > n ? `${string.substr(0, n - 1)} ...` : string;
   }
 
+  function getReleaseYear(date) {
+    const year = new Date(date);
+    return year.getFullYear();
+  }
+
   return (
     <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-tl from-netflix-red-light to-netflix-black">
       <div 
@@ -37,10 +42,11 @@ export default function Banner() {
         }}>
       </div>
 
-      <div className="relative ml-8 pt-20 h-48 z-10">
-        <h1 className="text-5xl font-bold pb-1">
-          Movie Name
-          <span className="text-2xl leading-4 font-thin">&nbsp;&nbsp;(1993)</span>
+      <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
+      <p className="pl-[2px] pb-2 font-medium uppercase">Featured</p>
+        <h1 className=" text-[2.5rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
+          {featuredShow?.title || featuredShow?.original_name || featuredShow?.name || featuredShow?.original_name}
+          <span className="text-2xl leading-4 font-thin opacity-50">&nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})</span>
         </h1>
         <div className="mt-4">
           <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
@@ -50,17 +56,9 @@ export default function Banner() {
             My List
           </button>
         </div>
-        <h1 className="text-sm w-[45rem] max-w-sm h-20 pt-4">
-          {truncate(
-            `This is a test description. This is a test description. This is a test description. This is a test description.
-          This is a test description. This is a test description. This is a test description. This is a test description.
-          This is a test description. This is a test description. This is a test description. This is a test description.
-          This is a test description. This is a test description. This is a test description. This is a test description.
-          This is a test description. This is a test description. This is a test description. This is a test description.
-          This is a test description. This is a test description.`,
-            130
-          )}
-        </h1>
+        <p className="text-base leading-5 font-normal w-[45rem] max-w-sm h-20 pt-4">
+          {truncate(featuredShow?.overview ,130)}
+        </p>
       </div>
 
       <div className="h-28 mt-20" />
