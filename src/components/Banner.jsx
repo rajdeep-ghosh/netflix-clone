@@ -1,18 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/Banner.css";
+import axios from "../api/base";
+import requests from "../api/endpoints";
 
 export default function Banner() {
+  const [featuredShow, setFeaturedShow] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(requests.fetchNetflixOriginals);
+      setFeaturedShow(
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length - 1)
+        ]
+      );
+      return request;
+    }
+
+    fetchData();
+  }, []);
+
+  console.log(featuredShow);
+
   function truncate(string, n) {
     return string?.length > n ? `${string.substr(0, n - 1)} ...` : string;
   }
 
   return (
     <header
-      className="h-96 relative object-contain text-white"
+      className="h-[30rem] relative object-contain text-white"
       style={{
         backgroundSize: "cover",
-        backgroundColor: "black",
-        backgroundPosition: "center center",
+        backgroundImage: `url("https://image.tmdb.org/t/p/w1280${featuredShow?.backdrop_path}")`,
+        backgroundPosition: "right top",
       }}
     >
       <div className="ml-8 pt-36 h-48">
