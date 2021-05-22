@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-    .netflix__black {
-        @apply bg-[#111];
+    .nav__dark {
+        @apply bg-netflix-black;
     }
 
     .banner__btn {

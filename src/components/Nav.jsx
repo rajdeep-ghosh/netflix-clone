@@ -19,7 +19,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <div className={`fixed top-0 p-5 w-full h-20 z-[1] ${showNavbar && `netflix__black`} transition ease-in duration-500`}>
+    <div className={`fixed top-0 p-5 w-full h-20 z-[1] ${showNavbar && `nav__dark`} transition ease-in duration-500`}>
       <nav className="flex justify-between">
         <img
           className="w-28 fixed left-0 top-3 object-contain pl-5 cursor-pointer"

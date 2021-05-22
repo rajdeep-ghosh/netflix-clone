@@ -27,7 +27,7 @@ export default function Banner() {
   }
 
   return (
-    <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-tl from-[#999] to-[#111]">
+    <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-tl from-netflix-red-light to-netflix-black">
       <div 
         className="absolute top-0 right-0 w-3/4 h-[30rem] mix-blend-overlay banner__overlay"
         style={{
@@ -37,7 +37,7 @@ export default function Banner() {
         }}>
       </div>
 
-      <div className="ml-8 pt-36 h-48">
+      <div className="relative ml-8 pt-20 h-48 z-10">
         <h1 className="text-5xl font-bold pb-1">
           Movie Name
           <span className="text-2xl leading-4 font-thin">&nbsp;&nbsp;(1993)</span>
