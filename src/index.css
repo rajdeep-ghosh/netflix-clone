@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-    .netflix__black {
-        @apply bg-[#111];
+    .nav__dark {
+        @apply bg-netflix-black;
     }
 
     .banner__btn {
-        @apply cursor-pointer border-none text-white font-bold rounded-[0.2vw] px-8 py-2 mr-4 bg-[#33333380];
+        @apply cursor-pointer border-none font-bold px-8 py-2 mr-4 bg-[#33333380];
     }
 }
