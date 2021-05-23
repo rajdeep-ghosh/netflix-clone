@@ -21,7 +21,7 @@ export default function Banner() {
     fetchData();
   }, []);
 
-  console.log(featuredShow);
+  // console.log(featuredShow);
 
   function truncate(string, n) {
     return string?.length > n ? `${string.substr(0, n - 1)} ...` : string;
@@ -44,7 +44,7 @@ export default function Banner() {
       </div>
 
       <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
-        <p className="pl-[2px] pb-2 font-medium uppercase">Featured</p>
+        <p className="pl-[2px] pb-2 font-medium uppercase tracking-wider">Featured</p>
         <h1 className=" text-[3rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
           {featuredShow?.title || featuredShow?.original_name || featuredShow?.name || featuredShow?.original_name}
           <span className="text-2xl leading-4 font-thin opacity-50">
@@ -57,7 +57,7 @@ export default function Banner() {
           })}
         </p>
         <p className="text-base leading-5 font-normal w-[45rem] max-w-sm h-20 pt-4 ml-1">
-          {truncate(featuredShow?.overview ,130)}
+          {truncate(featuredShow?.overview ,125)}
         </p>
         <p className="pl-[2px] mt-2 font-medium uppercase flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
@@ -82,12 +82,17 @@ export default function Banner() {
           </span>
         </p>
         <div className="mt-4">
-          <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
-            Play
+          <button className="banner__btn rounded-3xl flex items-center hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span className="uppercase tracking-wide font-normal">&nbsp;&nbsp;Play</span>
           </button>
-          <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
+          {/* <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
             My List
-          </button>
+          </button> */}
         </div>
       </div>
 
