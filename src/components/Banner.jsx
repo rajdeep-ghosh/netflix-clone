@@ -45,7 +45,7 @@ export default function Banner() {
 
       <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
         <p className="pl-[2px] pb-2 font-medium uppercase">Featured</p>
-        <h1 className=" text-[2.5rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
+        <h1 className=" text-[3rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
           {featuredShow?.title || featuredShow?.original_name || featuredShow?.name || featuredShow?.original_name}
           <span className="text-2xl leading-4 font-thin opacity-50">
             &nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})
@@ -56,6 +56,31 @@ export default function Banner() {
             return <span>{getGenre(genre)}&nbsp;&nbsp;</span>;
           })}
         </p>
+        <p className="text-base leading-5 font-normal w-[45rem] max-w-sm h-20 pt-4 ml-1">
+          {truncate(featuredShow?.overview ,130)}
+        </p>
+        <p className="pl-[2px] mt-2 font-medium uppercase flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-yellow-500 float-left" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <span className="pl-2">
+            {featuredShow?.vote_average}
+            &nbsp;
+            ({featuredShow?.vote_count})
+          </span>
+        </p>
         <div className="mt-4">
           <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
             Play
@@ -64,9 +89,6 @@ export default function Banner() {
             My List
           </button>
         </div>
-        <p className="text-base leading-5 font-normal w-[45rem] max-w-sm h-20 pt-4">
-          {truncate(featuredShow?.overview ,130)}
-        </p>
       </div>
 
       <div className="h-28 mt-20" />
