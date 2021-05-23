@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/Banner.css";
 import axios from "../api/base";
 import requests from "../api/endpoints";
+import { getGenre } from "../api/genres";
 
 export default function Banner() {
   const [featuredShow, setFeaturedShow] = useState([]);
@@ -43,11 +44,18 @@ export default function Banner() {
       </div>
 
       <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
-      <p className="pl-[2px] pb-2 font-medium uppercase">Featured</p>
+        <p className="pl-[2px] pb-2 font-medium uppercase">Featured</p>
         <h1 className=" text-[2.5rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
           {featuredShow?.title || featuredShow?.original_name || featuredShow?.name || featuredShow?.original_name}
-          <span className="text-2xl leading-4 font-thin opacity-50">&nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})</span>
+          <span className="text-2xl leading-4 font-thin opacity-50">
+            &nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})
+          </span>
         </h1>
+        <p className="pl-[2px] pt-2 font-medium uppercase">
+          {featuredShow?.genre_ids?.slice(0,3).map((genre) => {
+            return <span>{getGenre(genre)}&nbsp;&nbsp;</span>;
+          })}
+        </p>
         <div className="mt-4">
           <button className="banner__btn hover:text-black hover:bg-[#e6e6e6] transition duration-200 focus:outline-none">
             Play
