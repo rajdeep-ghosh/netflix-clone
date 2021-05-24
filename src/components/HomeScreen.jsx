@@ -11,7 +11,7 @@ export default function HomeScreen() {
       {/* Banner */}
         <Banner />
 
-      {/* Rows */}
+      {/* List */}
     </div>
   );
 }
