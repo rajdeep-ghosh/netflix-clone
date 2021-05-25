@@ -47,7 +47,7 @@ export default function Banner() {
       <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
         <p className="pl-[2px] pb-2 font-medium uppercase tracking-wider">Featured</p>
         <h1 className=" text-[3rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
-          {featuredShow?.title || featuredShow?.original_name || featuredShow?.name || featuredShow?.original_name}
+          {featuredShow?.title || featuredShow?.original_title || featuredShow?.name || featuredShow?.original_name}
           <span className="text-2xl leading-4 font-thin opacity-50">
             &nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})
           </span>
