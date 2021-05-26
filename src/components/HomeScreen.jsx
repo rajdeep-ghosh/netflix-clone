@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
+import List from "./List";
 import Nav from "./Nav";
 
 export default function HomeScreen() {
@@ -12,6 +13,7 @@ export default function HomeScreen() {
         <Banner />
 
       {/* List */}
+        <List />
     </div>
   );
 }
