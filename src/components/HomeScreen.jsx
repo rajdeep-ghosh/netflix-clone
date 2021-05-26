@@ -13,7 +13,7 @@ export default function HomeScreen() {
         <Banner />
 
       {/* List */}
-        <List />
+        <List title="Top Rated Movies" />
     </div>
   );
 }
