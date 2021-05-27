@@ -3,7 +3,9 @@ import "./styles/Banner.css";
 import Rating from '@material-ui/lab/Rating';
 import axios from "../api/base";
 import requests from "../api/endpoints";
-import { getGenre } from "../api/genres";
+import { getReleaseYear } from "../features/releaseYear";
+import { getGenre } from "../features/genres";
+import { truncate } from "../features/textTruncate";
 
 export default function Banner() {
   const [featuredShow, setFeaturedShow] = useState([]);
@@ -24,17 +26,8 @@ export default function Banner() {
 
   console.log(featuredShow);
 
-  function truncate(string, n) {
-    return string?.length > n ? `${string.substr(0, n - 1)} ...` : string;
-  }
-
-  function getReleaseYear(date) {
-    const year = new Date(date);
-    return year.getFullYear();
-  }
-
   return (
-    <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-tl from-netflix-red-light to-netflix-black">
+    <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-b to-netflix-red-light from-netflix-black">
       <div 
         className="absolute top-0 right-0 w-3/4 h-[30rem] mix-blend-overlay banner__overlay"
         style={{
@@ -44,9 +37,9 @@ export default function Banner() {
         }}>
       </div>
 
-      <div className="relative pt-20 h-48 z-10 text-white font-work-sans">
+      <div className="relative pt-20 z-10 text-white font-work-sans">
         <p className="pl-[2px] pb-2 font-medium uppercase tracking-wider">Featured</p>
-        <h1 className=" text-[3rem] leading-9 font-mulish font-black max-w-[840px] pb-1">
+        <h1 className=" text-[3rem] leading-[3rem] font-mulish font-black max-w-[840px] pb-1">
           {featuredShow?.title || featuredShow?.original_title || featuredShow?.name || featuredShow?.original_name}
           <span className="text-2xl leading-4 font-thin opacity-50">
             &nbsp;&nbsp;({getReleaseYear(featuredShow?.release_date || featuredShow?.first_air_date)})
@@ -54,11 +47,11 @@ export default function Banner() {
         </h1>
         <p className="pl-[2px] pt-2 font-medium uppercase">
           {featuredShow?.genre_ids?.slice(0,3).map((genre) => {
-            return <span>{getGenre(genre)}&nbsp;&nbsp;</span>;
+            return <span key={genre}>{getGenre(genre)}&nbsp;&nbsp;</span>;
           })}
         </p>
-        <p className="text-base leading-5 font-normal w-[45rem] max-w-sm h-20 pt-4 ml-1">
-          {truncate(featuredShow?.overview ,125)}
+        <p className="text-base leading-5 font-normal w-[45rem] max-w-[50%] pt-4 ml-[0.1rem]">
+          {truncate(featuredShow?.overview ,200)}
         </p>
         <p className="pl-[2px] mt-2 font-medium uppercase">
           <Rating className="h-5 w-5 float-left" name="read-only" value={featuredShow?.vote_average/2} precision={0.5} readOnly />
@@ -82,8 +75,6 @@ export default function Banner() {
           </button> */}
         </div>
       </div>
-
-      <div className="h-28 mt-20" />
     </header>
   );
 }
