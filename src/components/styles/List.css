@@ -1,3 +1,12 @@
 .big__list {
-    flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.list__posters {
+  scroll-padding-left: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.list__posters::-webkit-scrollbar {
+  display: none;
 }

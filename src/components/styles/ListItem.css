@@ -1,0 +1,5 @@
+.list__item {
+  flex: 0 0 200px;
+  background: #fff;
+  scroll-snap-align: start;
+}
