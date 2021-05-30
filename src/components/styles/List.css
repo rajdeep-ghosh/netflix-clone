@@ -5,6 +5,8 @@
 .list__posters {
   scroll-padding-left: 10px;
   scroll-snap-type: x mandatory;
+  -webkit-mask-image: linear-gradient(90deg, #111 80%, transparent);
+  mask-image: linear-gradient(90deg, #111 80%, transparent);
 }
 
 .list__posters::-webkit-scrollbar {
