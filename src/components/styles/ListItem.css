@@ -1,10 +1,10 @@
-.list__item {
+.listitem {
   flex: 0 0 200px;
   background: #fff;
   scroll-snap-align: start;
 }
 
-/* .list__item::before {
+.listitem::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -16,4 +16,26 @@
   left: 0;
   transition: all .2s;
   z-index: 1;
-} */
+}
+
+.listitem:hover::before {
+  content: none;
+}
+
+.listitem:hover .listitem__name {
+  display: none;
+}
+
+.listitem__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.25s;
+}
+
+.listitem__overlay > * {
+  transform: translateY(100px);
+  transition: transform 0.25s;
+}
+
+.listitem__overlay:hover > * {
+  transform: translateY(0);
+}
