@@ -4,7 +4,7 @@
   scroll-snap-align: start;
 }
 
-/* .listitem::before {
+.listitem::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -24,8 +24,18 @@
 
 .listitem:hover .listitem__name {
   display: none;
-} */
+}
 
 .listitem__overlay {
   background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.25s;
+}
+
+.listitem__overlay > * {
+  transform: translateY(100px);
+  transition: transform 0.25s;
+}
+
+.listitem__overlay:hover > * {
+  transform: translateY(0);
 }
