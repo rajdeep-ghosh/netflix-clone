@@ -1,3 +1,7 @@
+.list__notfirst {
+  background: #111;
+}
+
 .big__list {
   flex: 0 0 100%;
 }

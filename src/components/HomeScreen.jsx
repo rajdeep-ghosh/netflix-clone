@@ -7,14 +7,58 @@ import requests from "../api/endpoints";
 export default function HomeScreen() {
   return (
     <div>
-      {/* Nav */}
-        <Nav />
-      
-      {/* Banner */}
-        <Banner />
-
-      {/* List */}
-        <List title="Top Rated Movies" fetchURL={requests.fetchTopRated} />
+      <Nav />
+      <Banner />
+      <List
+        title="Netflix Originals"
+        fetchURL={requests.fetchNetflixOriginals}
+        isFirstList={true}
+      />
+      <List
+        title="Latest & Trending"
+        fetchURL={requests.fetchTrending}
+        isFirstList={false}
+      />
+      <List
+        title="Top Rated Movies"
+        fetchURL={requests.fetchTopRated}
+        isFirstList={false}
+      />
+      <List
+        title="Top Rated Series For You"
+        fetchURL={requests.fetchWebSeries}
+        isFirstList={false}
+      />
+      <List
+        title="Anime Series"
+        fetchURL={requests.fetchAnime}
+        isFirstList={false}
+      />
+      <List
+        title="Anime Movies"
+        fetchURL={requests.fetchAnimeMovies}
+        isFirstList={false}
+      />
+      <List
+        title="Romantic Movies"
+        fetchURL={requests.fetchRomanceMovies}
+        isFirstList={false}
+      />
+      <List
+        title="Animated Movies"
+        fetchURL={requests.fetchAnimationMovies}
+        isFirstList={false}
+      />
+      <List
+        title="Made in India"
+        fetchURL={requests.fetchIndianMovies}
+        isFirstList={false}
+      />
+      <List
+        title="Horror Movies"
+        fetchURL={requests.fetchHorrorMovies}
+        isFirstList={false}
+      />
     </div>
   );
 }
