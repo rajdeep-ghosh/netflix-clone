@@ -18,9 +18,15 @@ export default function List(props) {
 
   return (
     <div
-      className={`px-12 py-6 w-full flex bg-gradient-to-b from-netflix-red-light to-netflix-black ${
-        !props.isFirstList && `list__notfirst`
-      }`}
+      className={`px-12 py-6 w-full flex 
+        ${
+          props.isFirstList && !props.isLastList
+            ? `bg-gradient-to-b from-netflix-red-light to-netflix-black`
+            : props.isLastList
+            ? `bg-gradient-to-b from-netflix-black to-netflix-red-light`
+            : `list__notfirst`
+        }
+      `}
     >
       <div className="mr-8 relative big__list">
         <h2 className="font-mulish font-extrabold text-2xl text-white leading-5 mb-8">
