@@ -25,8 +25,6 @@ export default function Banner() {
     fetchData();
   }, []);
 
-  console.log(featuredShow);
-
   return (
     <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-b to-netflix-red-light from-netflix-black">
       <div 
