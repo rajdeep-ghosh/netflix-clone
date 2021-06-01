@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="pt-4 font-work-sans font-medium text-base text-white">
         <p className="whitespace-nowrap w-full">
           &copy; {year} Rajdeep Ghosh | 
-          <a href="https://github.com/rajdeep-ghosh/netflix-clone" target="_blanck"> GitHub</a>
+          <a href="https://github.com/rajdeep-ghosh/netflix-clone" target="_blank" rel="noreferrer"> GitHub</a>
         </p>
       </div>
     </div>
