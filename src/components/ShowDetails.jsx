@@ -102,6 +102,13 @@ export default function ShowDetails({ match }) {
         fetchURL={`/${match.params.contentType}/${match.params.id}/recommendations?api_key=${API_KEY}`}
         contentType={match.params.contentType}
         isFirstList={false}
+        isLastList={false}
+      />
+      <List 
+        title="Popular Today"
+        fetchURL={`/${match.params.contentType}/popular?api_key=${API_KEY}`}
+        contentType={match.params.contentType}
+        isFirstList={false}
         isLastList={true}
       />
     </div>
