@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/Banner.css";
 import Rating from '@material-ui/lab/Rating';
 import PlayButton from "./PlayButton";
+import VideoModal from "./VideoModal";
 import axios from "../api/base";
 import requests from "../api/endpoints";
 import { getReleaseYear } from "../features/releaseYear";
@@ -10,6 +11,7 @@ import { truncate } from "../features/textTruncate";
 
 export default function Banner() {
   const [featuredShow, setFeaturedShow] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -24,6 +26,10 @@ export default function Banner() {
 
     fetchData();
   }, []);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <header className="w-full pt-28 px-12 pb-12 bg-gradient-to-b to-netflix-red-light from-netflix-black">
@@ -61,7 +67,8 @@ export default function Banner() {
           </span>
         </p>
         <div className="mt-4">
-          <PlayButton />
+          <VideoModal open={isOpen} id={featuredShow?.id} close={handleChange} />
+          <PlayButton click={handleChange} />
         </div>
       </div>
     </header>
