@@ -97,6 +97,13 @@ export default function ShowDetails({ match }) {
         isFirstList={true}
         isLastList={false}
       />
+      <List 
+        title="You May Also Like"
+        fetchURL={`/${match.params.contentType}/${match.params.id}/recommendations?api_key=${API_KEY}`}
+        contentType={match.params.contentType}
+        isFirstList={false}
+        isLastList={true}
+      />
     </div>
   );
 }
