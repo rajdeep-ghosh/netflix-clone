@@ -6,7 +6,6 @@ import VideoModal from "./VideoModal";
 import List from "./List";
 import axios from "../api/base";
 import { getReleaseYear } from "../features/releaseYear";
-import { truncate } from "../features/textTruncate";
 
 export default function ShowDetails({ match }) {
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
@@ -63,7 +62,7 @@ export default function ShowDetails({ match }) {
             })}
           </p>
           <p className="text-base leading-5 font-normal w-[45rem] max-w-[50%] pt-4 ml-[0.1rem]">
-            {truncate(title?.overview, 200)}
+            {title?.overview}
           </p>
           <p className="pl-[2px] mt-2 font-medium uppercase">
             <Rating
