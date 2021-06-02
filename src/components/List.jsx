@@ -34,7 +34,7 @@ export default function List(props) {
         </h2>
         <div className="flex overflow-y-hidden overflow-x-scroll p-2 -ml-2 -mt-2 list__posters">
           {contents.map((content) => {
-            return <ListItem key={content.id} content={content} />;
+            return <ListItem key={content.id} content={content} contentType={props.contentType} />;
           })}
         </div>
       </div>

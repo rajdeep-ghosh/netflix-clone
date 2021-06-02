@@ -7,15 +7,11 @@ import "./styles/VideoModal.css";
 function VideoModal(props) {
   const [vidId, setVidId] = useState();
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
-  const movieURL = `/movie/${props.id}/videos?api_key=${API_KEY}`;
-  const tvURL = `/tv/${props.id}/videos?api_key=${API_KEY}`;
+  const url = `/${props.contentType}/${props.id}/videos?api_key=${API_KEY}`;
 
   useEffect(() => {
     async function fetchData() {
-      let request = await axios.get(movieURL);
-      if (request.data.success === "false" || !request.data.results.length) {
-        request = await axios.get(tvURL);
-      }
+      const request = await axios.get(url);
       handleSet(request.data.results);
       return request;
     }
