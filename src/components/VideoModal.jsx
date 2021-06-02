@@ -17,7 +17,7 @@ function VideoModal(props) {
     }
 
     fetchData();
-  });
+  }, [url]);
 
   function handleSet(shows) {
     for (let index = 0; index < shows.length; index++) {

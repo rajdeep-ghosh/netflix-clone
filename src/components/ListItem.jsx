@@ -11,7 +11,7 @@ export default function ListItem(props) {
   return (
     
     <div className="listitem h-[300px] mr-5 rounded-2xl overflow-hidden relative cursor-pointer shadow-md">
-      <Link to={`${props.contentType}/title/${props.content.id}`} >
+      <Link to={`/${props.contentType}/title/${props.content.id}`} >
         <img
           className="listitem__img w-full h-full object-cover block transform scale-110 transition-all ease-out duration-200"
           loading="lazy"
