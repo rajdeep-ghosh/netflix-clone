@@ -4,6 +4,7 @@ import Rating from "@material-ui/lab/Rating";
 import PlayButton from "./PlayButton";
 import VideoModal from "./VideoModal";
 import List from "./List";
+import Credits from "./Credits";
 import axios from "../api/base";
 import { getReleaseYear } from "../features/releaseYear";
 
@@ -89,11 +90,13 @@ export default function ShowDetails({ match }) {
         </div>
       </header>
       
+      <Credits contentType={match.params.contentType} id={title.id} />
+
       <List 
         title={`Similar ${match.params.contentType === "movie" ? `Movies` : `TV Shows`}`}
         fetchURL={`/${match.params.contentType}/${match.params.id}/similar?api_key=${API_KEY}`}
         contentType={match.params.contentType}
-        isFirstList={true}
+        isFirstList={false}
         isLastList={false}
       />
       <List 
