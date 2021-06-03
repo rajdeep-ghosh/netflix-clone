@@ -23,12 +23,13 @@ const useStyles = makeStyles({
 function Cast(props) {
   const classes = useStyles();
   const imageBase = "https://image.tmdb.org/t/p/w200";
+  const defaultImg = "https://bit.ly/3g9yvRA";
 
   return (
     <Card className={classes.root}>
       <CardMedia
         className={classes.media}
-        image={`${imageBase}${props.img}`}
+        image={props.img !== null ? `${imageBase}${props.img}` : `${defaultImg}`}
         title={props.name}
       />
       <CardContent className={classes.content} >
