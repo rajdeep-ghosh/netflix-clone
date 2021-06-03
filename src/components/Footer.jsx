@@ -9,8 +9,9 @@ export default function Footer() {
       <img className="w-32" src={tmdbIcon} alt="TMDB icon" />
       <div className="pt-4 font-work-sans font-medium text-base text-white">
         <p className="whitespace-nowrap w-full">
-          &copy; {year} Rajdeep Ghosh | 
-          <a href="https://github.com/rajdeep-ghosh/netflix-clone" target="_blank" rel="noreferrer"> GitHub</a>
+          &copy; {year} Rajdeep Ghosh
+          <a href="https://github.com/rajdeep-ghosh/netflix-clone" target="_blank" rel="noreferrer"> | GitHub</a>
+          <a href="https://linkedin.com/in/rajdeepghosh01/" target="_blank" rel="noreferrer"> | LinkedIn</a>
         </p>
       </div>
     </div>
