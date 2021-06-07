@@ -5,9 +5,9 @@ import PlayButton from "./PlayButton";
 import VideoModal from "./VideoModal";
 import axios from "../api/base";
 import requests from "../api/endpoints";
-import { getReleaseYear } from "../features/releaseYear";
-import { getGenre } from "../features/genres";
-import { truncate } from "../features/textTruncate";
+import { getReleaseYear } from "../utils/releaseYear";
+import { getGenre } from "../utils/genres";
+import { truncate } from "../utils/textTruncate";
 
 export default function Banner() {
   const [featuredShow, setFeaturedShow] = useState([]);
