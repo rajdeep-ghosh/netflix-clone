@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/ListItem.css";
 import Rating from '@material-ui/lab/Rating';
-import { truncate } from "../features/textTruncate";
-import { getReleaseYear } from "../features/releaseYear";
+import { truncate } from "../utils/textTruncate";
+import { getReleaseYear } from "../utils/releaseYear";
 
 export default function ListItem(props) {
   const posterBaseURL = "https://image.tmdb.org/t/p/w500";

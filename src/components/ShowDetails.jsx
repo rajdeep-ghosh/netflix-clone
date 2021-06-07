@@ -6,7 +6,7 @@ import VideoModal from "./VideoModal";
 import List from "./List";
 import Credits from "./Credits";
 import axios from "../api/base";
-import { getReleaseYear } from "../features/releaseYear";
+import { getReleaseYear } from "../utils/releaseYear";
 
 export default function ShowDetails({ match }) {
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
